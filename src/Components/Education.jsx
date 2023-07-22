@@ -7,6 +7,10 @@ import React from "react";
 // date is a string
 //
 
+import image from "../images/image_4.jpg";
+
+const imageAltText = "college photo";
+
 const educationList = [
   {
     title: "Bachelors of Computer Engineering",
@@ -32,6 +36,11 @@ const Education = () => {
     return(
         <section className="light" id="education">
             <h2>Education</h2>
+      {/* put image and grids side by side */}
+        <div style={{ display: "flex", flexDirection: "row", paddingTop: "3rem" }}>
+            <div style={{ maxWidth: "40%", alignSelf: "center" }}>
+                <img src={image} style={{ height: "90%", width: "100%", objectFit: "cover", animation: "1s ease-out 0s 1 slideIn" }} alt={imageAltText} />
+            </div>
             <div className="container">
                 {educationList.map((education) => (
                     <div className="box" key={education.title}>
@@ -41,6 +50,10 @@ const Education = () => {
                     </div>
                 ))}
             </div>
+        </div>
+        
+     
+
 
         </section>
     )
