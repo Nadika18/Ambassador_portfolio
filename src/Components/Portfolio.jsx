@@ -32,8 +32,7 @@ const imageAltText = "desktop with books and laptop";
 const projectList = [
   {
     title: "AI Yoga Trainer ",
-    description:
-      "AI yoga trainer that provides real-time audio feedback to correct yoga poses",
+    description: "AI yoga trainer that provides real-time audio feedback to correct yoga poses",
     url: "https://github.com/Nadika18/MinorProject",
   },
   {
@@ -42,7 +41,6 @@ const projectList = [
       "A  smart goggles that detects it's surrounding through camera-fed AI model that informs the user with very low or no eyesight by prioritizing the objects and informing their positions .",
     url: "https://github.com/microsoft/web-dev-for-beginners",
   },
-  
 ];
 
 const Portfolio = () => {
@@ -53,7 +51,12 @@ const Portfolio = () => {
         <div style={{ maxWidth: "40%", alignSelf: "center" }}>
           <img
             src={image}
-            style={{ height: "90%", width: "100%", objectFit: "cover" }}
+            style={{
+              height: "90%",
+              width: "100%",
+              objectFit: "cover",
+              animation: "1s ease-out 0s 1 slideIn",
+            }}
             alt={imageAltText}
           />
         </div>
